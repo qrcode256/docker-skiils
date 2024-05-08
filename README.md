@@ -25,6 +25,8 @@
 
 *  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker Tutorials and Labs](https://github.com/docker/labs)
 
+*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker get started guide](https://docs.docker.com/get-started/)
+
 
 
 #### Docker Video resources
@@ -36,6 +38,10 @@
 ### Docker books
 *  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Mastering Docker – Fourth Edition](https://github.com/PacktPublishing/Mastering-Docker-Fourth-Edition)
 
+
+### Docker best practice
+
+*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> General best practices for writing Dockerfiles ](https://docs.docker.com/develop/develop-images/guidelines/#create-ephemeral-containers)
 
 
 
@@ -75,3 +81,12 @@ Docker client docker is how users interact with docker. docker client sends comm
 
 
 ### Docker compose
+
+
+
+#### Sources files:
+
+[RU] [Read more about docker](https://habr.com/ru/companies/ruvds/articles/439980/)
+[RU] [Docker compose for beginner](https://habr.com/ru/companies/ruvds/articles/450312/)
+
+
