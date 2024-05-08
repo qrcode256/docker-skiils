@@ -1,4 +1,4 @@
-Base security rules:
+Best Practice with Security rules:
 
 - #### Keep Host and Docker up to date.
 To protect against known container escape vulnerabilities like [Leaky Vessels](https://snyk.io/blog/cve-2024-21626-runc-process-cwd-container-breakout/), which typically result in the attacker gaining root access to the host, it's vital to keep both the host and Docker up to date. This includes regularly updating the host kernel as well as the Docker Engine.
@@ -16,7 +16,7 @@ Docker socket /var/run/docker.sock is the UNIX socket that Docker is listening t
 
 If you are running docker daemon with -H tcp://0.0.0.0:XXX or similar you are exposing un-encrypted and unauthenticated direct access to the Docker daemon, if the host is internet connected this means the docker daemon on your computer can be used by anyone from the public internet. If you really, really have to do this, you should secure it. 
 
-- ####  Set a user
+- #### Set a user. Don’t run containers as root
 Configuring the container to use an unprivileged user is the best way to prevent privilege escalation attacks
 Example 1:
 ```sh
@@ -28,6 +28,20 @@ FROM alpine
 RUN groupadd -r myuser && useradd -r -g myuser myuser
 #    <HERE DO WHAT YOU HAVE TO DO AS A ROOT USER LIKE INSTALLING PACKAGES ETC.>
 USER myuser
+```
+
+The principle of least privilege is a security principle from the early days of Unix and we should always follow this when we’re running our containerized Node.js web applications.
+
+The threat assessment is pretty straight-forward—if an attacker is able to compromise the web application in a way that allows for [command injection](https://www.snyk.io/blog/command-injection/) or [directory path traversal](https://snyk.io/blog/snyking-in-directory-traversal-vulnerability-exploit-in-the-st-package/), then these will be invoked with the user who owns the application process. If that process happens to be root then they can do virtually everything within the container, including [attempting a container escape](https://www.snyk.io/blog/a-serious-security-flaw-in-runc-can-result-in-root-privilege-escalation-in-docker-and-kubernetes/) or privilege escalation. Why would we want to risk it? You’re right, we don’t.
+
+```sh .Dockerfile
+FROM node:16.17.0-bullseye-slim
+ENV NODE_ENV production
+WORKDIR /usr/src/app
+COPY --chown=node:node . /usr/src/app
+RUN npm ci --only=production
+USER node
+CMD "npm" "start"
 ```
 
 - #### Prevent in-container privilege escalation
@@ -109,6 +123,57 @@ If you’re practicing all of the security guidelines we covered so far with sca
 - #### Follow security guidelines and production-grade recommendation for a secure and optimal Node.js Docker image
 
 
+- #### Use explicit and deterministic Docker base image tags
+Don't use `:latest` as it could produce extra vulnerabilities for every new image build
+If we build the image from node—which effectively means the node:latest tag—then every build will pull a newly built Docker image of node. We don’t want to introduce this sort of non-deterministic behavior.
+
+The recomend way is to use the Docker image digest, which is the static `SHA256 hash` of the image. This ensures that you are getting deterministic Docker image builds from the base image.
+
+The recommended Node.js Docker image to use would be: `FROM node:16.17.0-bullseye-slim`
+
+Example: 
+```sh
+FROM node@sha256:18ae6567b623f8c1caada3fefcc8746f8e84ad5c832abd909e129f6b13df25b4  #Using the Docker image digest ensures a deterministic image but it could be confusing or counterproductive for some image scanning tools who may not know how to interpret this. For that reason, using an explicit Node.js runtime version such as `16.17.0` is preferred. 
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+RUN npm install
+CMD "npm" "start"
+```
+Node.js Alpine is an unofficial Docker container image build that is maintained by the Node.js Docker team. The Node.js image bundles the Alpine operating system which is powered by the minimal busybox software tooling and the musl C library implementation. These two Node.js Alpine image characteristics contribute to the Docker image being unofficially supported by the Node.js team. Furthermore, many security vulnerabilities scanners can’t easily detect software artifacts or runtimes on Node.js Alpine images, which is counterproductive to efforts to secure your container images.
+
+
+- #### Install only production dependencies in the Node.js Docker image
+
+Example - `RUN npm install` include all dependencies in the container, including devDependencies which don't need in production
+
+Much better to use `RUN npm ci --only=production`
+
+```sh .Dockerfile
+FROM node:16.17.0-bullseye-slim
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+RUN npm ci --only=production
+CMD "npm" "start"
+```
+
+- #### Optimize Node.js tooling for production
+
+When you build your Node.js Docker image for production, you want to ensure that all frameworks and libraries are using the optimal settings for performance and security.
+
+`ENV NODE_ENV production`
+
+Some frameworks and libraries may only turn on the optimized configuration that is suited to production if that NODE_ENV=environment variable is set to production
+
+```sh .Dockerfile
+FROM node:16.17.0-bullseye-slim
+ENV NODE_ENV production
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+RUN npm ci --only=production
+CMD "npm" "start"
+```
+
+- #### Safely terminate Node.js Docker web applications
 
 
 
@@ -117,15 +182,7 @@ If you’re practicing all of the security guidelines we covered so far with sca
 
 Articles:
 
-[Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)
-
-
-10 Docker Security Best Practices 
-https://snyk.co/DockerImageSecurityTips
-
-10 best practices to containerize Node.js web applications with Docker
-https://snyk.co/SecureNodejsImages
-
-
-10 best practices to containerize Node.js web applications with Docker
-https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/
+- [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html)
+- [10 Docker Security Best Practices](https://snyk.co/DockerImageSecurityTips)
+- [10 best practices to containerize Node.js web applications with Docker](https://snyk.co/SecureNodejsImages)
+- [10 best practices to containerize Node.js web applications with Docker](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/)
