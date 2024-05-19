@@ -1,4 +1,4 @@
-Best Practice with Security rules:
+## Best Practice with Security rules:
 
 - #### Keep Host and Docker up to date.
 To protect against known container escape vulnerabilities like [Leaky Vessels](https://snyk.io/blog/cve-2024-21626-runc-process-cwd-container-breakout/), which typically result in the attacker gaining root access to the host, it's vital to keep both the host and Docker up to date. This includes regularly updating the host kernel as well as the Docker Engine.

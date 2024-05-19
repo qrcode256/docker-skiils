@@ -6,48 +6,44 @@
 
 
 #### Docker guide
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" width="15" height="15" alt="Logo" /> Docker-Guide](https://github.com/alpha74/Docker-Guide)
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker Cheat Sheet](https://github.com/slydeveloper/docker-cheat-sheet)
+*  [🐳Docker Guide](https://github.com/alpha74/Docker-Guide)
+*  [ ![Docker Cheat Sheet](./assets/images/icons8-docker-10.png) Docker Cheat Sheet](https://github.com/slydeveloper/docker-cheat-sheet)
 
 
 #### Docker Environment Variables
-
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15"/> Pass Docker Environment Variables During The Image Build](https://vsupalov.com/docker-build-pass-environment-variables/)
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15"/> How to Use Environment Variables ARG and ENV in Docker](https://www.bitdoze.com/docker-env-vars/)
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Syntax for environment files in Docker Compose](https://docs.docker.com/compose/environment-variables/env-file/)
+*  [ ![__img__](./assets/images/icons8-docker-10.png) Pass Docker Environment Variables During The Image Build](https://vsupalov.com/docker-build-pass-environment-variables/)
+*  [  ![__img__](./assets/images/icons8-docker-10.png) How to Use Environment Variables ARG and ENV in Docker](https://www.bitdoze.com/docker-env-vars/)
+*  [  ![__img__](./assets/images/icons8-docker-10.png) Syntax for environment files in Docker Compose](https://docs.docker.com/compose/environment-variables/env-file/)
 
 
 #### Docker Practice resources
-
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker containers through concepts in slides and hands-on labs.](https://github.com/layer5io/containers-101-workshop/tree/master/)
-
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker training with DockerMe](https://github.com/AhmadRafiee/Docker_training_with_DockerMe)
-
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker Tutorials and Labs](https://github.com/docker/labs)
-
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker get started guide](https://docs.docker.com/get-started/)
-
-
+*  [ ![__img__](./assets/images/icons8-docker-10.png) Docker containers through concepts in slides and hands-on labs.](https://github.com/layer5io/containers-101-workshop/tree/master/)
+*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker training with DockerMe](https://github.com/AhmadRafiee/Docker_training_with_DockerMe)
+*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker Tutorials and Labs](https://github.com/docker/labs)
+*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker get started guide](https://docs.docker.com/get-started/)
+*  [Docker for Node.js Course](https://www.bretfisher.com/docker-mastery-for-nodejs/)
 
 #### Docker Video resources
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
-
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Docker Compose Tutorial](https://www.youtube.com/watch?v=HG6yIjZapSA)
+*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
+*  [ ![__img__](./assets/images/icons8-docker-10.png) Docker Compose Tutorial](https://www.youtube.com/watch?v=HG6yIjZapSA)
 
 
 ### Docker books
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Mastering Docker – Fourth Edition](https://github.com/PacktPublishing/Mastering-Docker-Fourth-Edition)
+*  [ ![__img__](./assets/images/icons8-docker-10.png) Mastering Docker – Fourth Edition](https://github.com/PacktPublishing/Mastering-Docker-Fourth-Edition)
 
 
 ### Docker best practice
+*  [ ![__img__](./assets/images/icons8-docker-10.png) General best practices for writing Dockerfiles ](https://docs.docker.com/develop/develop-images/guidelines/#create-ephemeral-containers)
 
-*  [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> General best practices for writing Dockerfiles ](https://docs.docker.com/develop/develop-images/guidelines/#create-ephemeral-containers)
+### Docker using with Nodejs examples
+- [Apollo server starter project with TypeScript and Docker.](https://github.com/AndreaDiotallevi/apollo-server-docker)
+- [Kinsta - Hello World - Dockerfile - Node.js](https://github.com/kinsta/hello-world-dockerfile-nodejs)
+- [Simple blog made using many different languages](https://github.com/arshamalh/blogo/blob/master/docker-compose.yml)
+- [🎉 Node.js Rocks in Docker](https://github.com/BretFisher/nodejs-rocks-in-docker)
+- [Docker for Node.js Projects From a Docker Captain](https://www.udemy.com/course/docker-mastery-for-nodejs)
 
 
-
-
-
-
+# Docker components
 
 ### Docker container
 
@@ -67,7 +63,7 @@ A Docker container image is a lightweight, standalone, executable package of sof
     Volumes are persistent data stores implemented by the container engine. Compose offers a neutral way for services to mount volumes, and configuration parameters to allocate them to infrastructure.
 
 
-* [<img style="margin-bottom: 0;" src="./assets/images/docker-docs-icon.png" alt="Logo" width="15" height="15" /> Volumes top-level elements](https://docs.docker.com/compose/compose-file/07-volumes/)
+* [ ![__img__](./assets/images/icons8-docker-10.png) Volumes top-level elements](https://docs.docker.com/compose/compose-file/07-volumes/)
 
 ### Docker dockerfile
 * #### What is the dockerfile
@@ -90,3 +86,5 @@ Docker client docker is how users interact with docker. docker client sends comm
 [RU] [Docker compose for beginner](https://habr.com/ru/companies/ruvds/articles/450312/)
 
 
+### From Containers to Kubernetes with Node.js
+https://www.digitalocean.com/community/tutorial-series/from-containers-to-kubernetes-with-node-js
