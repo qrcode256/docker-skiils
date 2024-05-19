@@ -6,34 +6,34 @@
 
 
 #### Docker guide
-*  [🐳Docker Guide](https://github.com/alpha74/Docker-Guide)
-*  [ ![Docker Cheat Sheet](./assets/images/icons8-docker-10.png) Docker Cheat Sheet](https://github.com/slydeveloper/docker-cheat-sheet)
+*  [🐳 Docker Guide](https://github.com/alpha74/Docker-Guide)
+*  [🐳 Docker Cheat Sheet](https://github.com/slydeveloper/docker-cheat-sheet)
 
 
 #### Docker Environment Variables
-*  [ ![__img__](./assets/images/icons8-docker-10.png) Pass Docker Environment Variables During The Image Build](https://vsupalov.com/docker-build-pass-environment-variables/)
-*  [  ![__img__](./assets/images/icons8-docker-10.png) How to Use Environment Variables ARG and ENV in Docker](https://www.bitdoze.com/docker-env-vars/)
-*  [  ![__img__](./assets/images/icons8-docker-10.png) Syntax for environment files in Docker Compose](https://docs.docker.com/compose/environment-variables/env-file/)
+*  [🐳 Pass Docker Environment Variables During The Image Build](https://vsupalov.com/docker-build-pass-environment-variables/)
+*  [🐳 How to Use Environment Variables ARG and ENV in Docker](https://www.bitdoze.com/docker-env-vars/)
+*  [🐳 Syntax for environment files in Docker Compose](https://docs.docker.com/compose/environment-variables/env-file/)
 
 
 #### Docker Practice resources
-*  [ ![__img__](./assets/images/icons8-docker-10.png) Docker containers through concepts in slides and hands-on labs.](https://github.com/layer5io/containers-101-workshop/tree/master/)
-*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker training with DockerMe](https://github.com/AhmadRafiee/Docker_training_with_DockerMe)
-*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker Tutorials and Labs](https://github.com/docker/labs)
-*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker get started guide](https://docs.docker.com/get-started/)
+*  [🐳 Docker containers through concepts in slides and hands-on labs.](https://github.com/layer5io/containers-101-workshop/tree/master/)
+*  [🐳 Docker training with DockerMe](https://github.com/AhmadRafiee/Docker_training_with_DockerMe)
+*  [🐳 Docker Tutorials and Labs](https://github.com/docker/labs)
+*  [🐳 Docker get started guide](https://docs.docker.com/get-started/)
 *  [Docker for Node.js Course](https://www.bretfisher.com/docker-mastery-for-nodejs/)
 
 #### Docker Video resources
-*  [  ![__img__](./assets/images/icons8-docker-10.png) Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
-*  [ ![__img__](./assets/images/icons8-docker-10.png) Docker Compose Tutorial](https://www.youtube.com/watch?v=HG6yIjZapSA)
-
+*  [🐳 Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
+*  [🐳 Docker Compose Tutorial](https://www.youtube.com/watch?v=HG6yIjZapSA)
+*  [DockerCon 2017 - Moby's Cool Hack Session](https://www.youtube.com/watch?v=-h2VTE9WnZs)
 
 ### Docker books
-*  [ ![__img__](./assets/images/icons8-docker-10.png) Mastering Docker – Fourth Edition](https://github.com/PacktPublishing/Mastering-Docker-Fourth-Edition)
+*  [🐳 Mastering Docker – Fourth Edition](https://github.com/PacktPublishing/Mastering-Docker-Fourth-Edition)
 
 
 ### Docker best practice
-*  [ ![__img__](./assets/images/icons8-docker-10.png) General best practices for writing Dockerfiles ](https://docs.docker.com/develop/develop-images/guidelines/#create-ephemeral-containers)
+*  [🐳 General best practices for writing Dockerfiles ](https://docs.docker.com/develop/develop-images/guidelines/#create-ephemeral-containers)
 
 ### Docker using with Nodejs examples
 - [Apollo server starter project with TypeScript and Docker.](https://github.com/AndreaDiotallevi/apollo-server-docker)
@@ -41,7 +41,7 @@
 - [Simple blog made using many different languages](https://github.com/arshamalh/blogo/blob/master/docker-compose.yml)
 - [🎉 Node.js Rocks in Docker](https://github.com/BretFisher/nodejs-rocks-in-docker)
 - [Docker for Node.js Projects From a Docker Captain](https://www.udemy.com/course/docker-mastery-for-nodejs)
-
+- [🎉🎉🎉Play with Docker Classroom](https://training.play-with-docker.com/alacart/), [Labs play with docker](https://labs.play-with-docker.com/) [play-with-docker](https://github.com/play-with-docker/play-with-docker)
 
 # Docker components
 
@@ -63,7 +63,7 @@ A Docker container image is a lightweight, standalone, executable package of sof
     Volumes are persistent data stores implemented by the container engine. Compose offers a neutral way for services to mount volumes, and configuration parameters to allocate them to infrastructure.
 
 
-* [ ![__img__](./assets/images/icons8-docker-10.png) Volumes top-level elements](https://docs.docker.com/compose/compose-file/07-volumes/)
+* [🐳 Volumes top-level elements](https://docs.docker.com/compose/compose-file/07-volumes/)
 
 ### Docker dockerfile
 * #### What is the dockerfile
