@@ -4,6 +4,8 @@
 
 #### What is the docker
 
+#### Resources
+* [🐳 Top 5 Free Resources to Learn Docker](https://www.linkedin.com/pulse/top-5-free-resources-learn-docker-gineesh-madapparambath/)
 
 #### Docker guide
 *  [🐳 Docker Guide](https://github.com/alpha74/Docker-Guide)
@@ -21,7 +23,14 @@
 *  [🐳 Docker training with DockerMe](https://github.com/AhmadRafiee/Docker_training_with_DockerMe)
 *  [🐳 Docker Tutorials and Labs](https://github.com/docker/labs)
 *  [🐳 Docker get started guide](https://docs.docker.com/get-started/)
-*  [Docker for Node.js Course](https://www.bretfisher.com/docker-mastery-for-nodejs/)
+*  [🐳 Docker for Node.js Course](https://www.bretfisher.com/docker-mastery-for-nodejs/)
+*  [🐳 10 Best Docker Courses for 2024](https://www.classcentral.com/report/best-docker-courses/#helsinki)
+*  [🐳 DevOps With Docker: University of Helsinki. Answers](https://github.com/gthomas08/DevOps-With-Docker)
+*  [🐳 DevOps With Docker: University of Helsinki. Task](https://devopswithdocker.com/part-1/section-5)
+*  [🐳 Docker for IT Pros and System Administrators](https://training.play-with-docker.com/ops-landing/)
+*  [🐳 Docker Playground](https://labs.iximiuz.com/playgrounds/docker)
+*  [🐳 🎉🎉🎉Play with Docker Classroom](https://training.play-with-docker.com/alacart/), [Labs play with docker](https://labs.play-with-docker.com/) [play-with-docker](https://github.com/play-with-docker/play-with-docker)
+
 
 #### Docker Video resources
 *  [🐳 Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
@@ -34,14 +43,19 @@
 
 ### Docker best practice
 *  [🐳 General best practices for writing Dockerfiles ](https://docs.docker.com/develop/develop-images/guidelines/#create-ephemeral-containers)
+*  [🐳 Best practices Docker ](https://docs.docker.com/develop/develop-images/dockerfile_best-practices)
+
 
 ### Docker using with Nodejs examples
-- [Apollo server starter project with TypeScript and Docker.](https://github.com/AndreaDiotallevi/apollo-server-docker)
-- [Kinsta - Hello World - Dockerfile - Node.js](https://github.com/kinsta/hello-world-dockerfile-nodejs)
-- [Simple blog made using many different languages](https://github.com/arshamalh/blogo/blob/master/docker-compose.yml)
-- [🎉 Node.js Rocks in Docker](https://github.com/BretFisher/nodejs-rocks-in-docker)
-- [Docker for Node.js Projects From a Docker Captain](https://www.udemy.com/course/docker-mastery-for-nodejs)
-- [🎉🎉🎉Play with Docker Classroom](https://training.play-with-docker.com/alacart/), [Labs play with docker](https://labs.play-with-docker.com/) [play-with-docker](https://github.com/play-with-docker/play-with-docker)
+*  [Apollo server starter project with TypeScript and Docker.](https://github.com/AndreaDiotallevi/apollo-server-docker)
+*  [Kinsta - Hello World - Dockerfile - Node.js](https://github.com/kinsta/hello-world-dockerfile-nodejs)
+*  [Simple blog made using many different languages](https://github.com/arshamalh/blogo/blob/master/docker-compose.yml)
+*  [🎉 Node.js Rocks in Docker](https://github.com/BretFisher/nodejs-rocks-in-docker)
+*  [Docker for Node.js Projects From a Docker Captain](https://www.udemy.com/course/docker-mastery-for-nodejs)
+
+### Docker security
+*  [🐳 🎉Docker Security: 5 Risks and 5 Best Practices for Securing Your Containers](https://www.tigera.io/learn/guides/container-security-best-practices/docker-security/)
+
 
 # Docker components
 
@@ -71,6 +85,8 @@ Docker file is a blue print for creating docker images. Each instruction on a do
 
 ### Docker network
 
+* [RU][🐳 Docker swarm and overlay](https://habr.com/ru/articles/334004/)
+
 ### Docker client
 * #### What is the docker client
 Docker client docker is how users interact with docker. docker client sends commands such as docker run to dockerd to be carried out. Docker client can communicate with more than one docker daemon.
@@ -82,8 +98,8 @@ Docker client docker is how users interact with docker. docker client sends comm
 
 #### Sources files:
 
-[RU] [Read more about docker](https://habr.com/ru/companies/ruvds/articles/439980/)
-[RU] [Docker compose for beginner](https://habr.com/ru/companies/ruvds/articles/450312/)
+* [RU] [Read more about docker](https://habr.com/ru/companies/ruvds/articles/439980/)
+* [RU] [Docker compose for beginner](https://habr.com/ru/companies/ruvds/articles/450312/)
 
 
 ### From Containers to Kubernetes with Node.js
