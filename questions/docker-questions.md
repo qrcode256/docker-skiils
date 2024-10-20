@@ -501,8 +501,10 @@ _______________________________________________________
       - Adjust the load testing parameters as needed to simulate different scenarios and test the application's scalability and performance.
     </details>
 
-On What Circumstances Will You Lose Data Stored in a Container?
-The Data in a container can be lost whenever the container is deleted, or if docker non-persistent storage ( Ephemeral storage ) is used without proper data management. To make the data persistent , it is recommended to use Docker volumes or volume binding ( volume mounts ) are recommended.
+1. ⭐⭐  On What Circumstances Will You Lose Data Stored in a Container?
+    <details> <summary>answer </summary>
+      The Data in a container can be lost whenever the container is deleted, or if docker non-persistent storage ( Ephemeral storage ) is used without proper data management. To make the data persistent , it is recommended to use Docker volumes or volume binding ( volume mounts ) are recommended.
+    </details>
 
 
 ## Docker networks
